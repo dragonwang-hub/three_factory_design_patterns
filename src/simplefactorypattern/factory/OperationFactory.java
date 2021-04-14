@@ -4,6 +4,7 @@ import simplefactorypattern.product.Operation;
 import simplefactorypattern.product.concrete.OperationAdd;
 import simplefactorypattern.product.concrete.OperationDiv;
 import simplefactorypattern.product.concrete.OperationMul;
+import simplefactorypattern.product.concrete.OperationPower;
 import simplefactorypattern.product.concrete.OperationSub;
 
 public class OperationFactory {
@@ -21,6 +22,9 @@ public class OperationFactory {
                 break;
             case "/":
                 operation = new OperationDiv();
+                break;
+            case "^":
+                operation = new OperationPower();
                 break;
             default:
                 System.out.println("Input operate is incorrect!");
