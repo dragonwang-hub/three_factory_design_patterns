@@ -9,6 +9,7 @@ import simplefactorypattern.product.Operation;
 public class MainClass {
     public static void main(String[] args) {
         Operation operation = OperationFactory.createOperate("+");
+//        Operation operation = OperationFactory.createOperate("*");
         operation.setNumberA(1.23);
         operation.setNumberB(3.21);
         double result = operation.getResult();
