@@ -20,6 +20,10 @@ public class Opertation {
             case "/":
                 result = numberA / numberB;
                 break;
+//           when need add new operate
+//            case "^":
+//                result = "numberA ^ numberB";
+//                break;
             default:
                 System.out.println("Input operate is incorrect!");
                 break;
