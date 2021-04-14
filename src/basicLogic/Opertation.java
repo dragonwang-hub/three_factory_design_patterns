@@ -26,7 +26,6 @@ public class Opertation {
 //                break;
             default:
                 System.out.println("Input operate is incorrect!");
-                break;
         }
         return result;
     }
