@@ -1,4 +1,4 @@
-package basicLogic;
+package basiclogic;
 
 import java.util.Scanner;
 

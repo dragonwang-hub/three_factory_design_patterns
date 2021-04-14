@@ -1,4 +1,4 @@
-package simpleFactoryPattern.product;
+package simplefactorypattern.product;
 
 /**
  * @author yunlong.wang

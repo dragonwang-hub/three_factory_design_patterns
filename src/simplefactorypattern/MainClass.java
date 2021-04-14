@@ -1,7 +1,7 @@
-package simpleFactoryPattern;
+package simplefactorypattern;
 
-import simpleFactoryPattern.factory.OperationFactory;
-import simpleFactoryPattern.product.Operation;
+import simplefactorypattern.factory.OperationFactory;
+import simplefactorypattern.product.Operation;
 
 /**
  * @author yunlong.wang

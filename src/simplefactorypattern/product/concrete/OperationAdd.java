@@ -1,6 +1,6 @@
-package simpleFactoryPattern.product.concrete;
+package simplefactorypattern.product.concrete;
 
-import simpleFactoryPattern.product.Operation;
+import simplefactorypattern.product.Operation;
 
 public class OperationAdd extends Operation {
     @Override

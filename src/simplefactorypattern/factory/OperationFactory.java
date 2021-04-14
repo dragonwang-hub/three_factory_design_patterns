@@ -1,10 +1,10 @@
-package simpleFactoryPattern.factory;
+package simplefactorypattern.factory;
 
-import simpleFactoryPattern.product.Operation;
-import simpleFactoryPattern.product.concrete.OperationAdd;
-import simpleFactoryPattern.product.concrete.OperationDiv;
-import simpleFactoryPattern.product.concrete.OperationMul;
-import simpleFactoryPattern.product.concrete.OperationSub;
+import simplefactorypattern.product.Operation;
+import simplefactorypattern.product.concrete.OperationAdd;
+import simplefactorypattern.product.concrete.OperationDiv;
+import simplefactorypattern.product.concrete.OperationMul;
+import simplefactorypattern.product.concrete.OperationSub;
 
 public class OperationFactory {
     public static Operation createOperate(String operate) {
