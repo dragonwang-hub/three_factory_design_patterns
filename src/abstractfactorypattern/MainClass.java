@@ -6,6 +6,7 @@ import abstractfactorypattern.factory.concrete.DivFactory;
 import abstractfactorypattern.factory.concrete.MulFactory;
 import abstractfactorypattern.product.normal.Operation;
 import abstractfactorypattern.product.strict.StrictOperation;
+import abstractfactorypattern.product.string.StringOperation;
 
 public class MainClass {
     public static void main(String[] args) {
@@ -23,5 +24,11 @@ public class MainClass {
         strictOperation.setNumberB(1.9999);
         double strictResult = strictOperation.getResult();
         System.out.println("The strictResult is:" + strictResult);
+
+        StringOperation stringOperation = iFactory.createStringOperation();
+        stringOperation.setStringA("It is String A");
+        stringOperation.setStringB("It is String B");
+        String stringResult = stringOperation.getResult();
+        System.out.println("The stringResult is:" + stringResult);
     }
 }
