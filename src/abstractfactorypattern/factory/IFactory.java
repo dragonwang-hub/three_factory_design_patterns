@@ -1,13 +1,16 @@
 package abstractfactorypattern.factory;
 
-import abstractfactorypattern.product.normal.Operation;
-import abstractfactorypattern.product.strict.StrictOperation;
-import abstractfactorypattern.product.string.StringOperation;
+import abstractfactorypattern.product.add.Add;
+import abstractfactorypattern.product.div.Div;
+import abstractfactorypattern.product.mul.Mul;
+import abstractfactorypattern.product.sub.Sub;
 
 public interface IFactory {
-    Operation createOperation();
+    Add createAdd();
 
-    StrictOperation createStrictOperation();
+    Sub createSub();
 
-    StringOperation createStringOperation();
+    Div createDiv();
+
+    Mul createMul();
 }

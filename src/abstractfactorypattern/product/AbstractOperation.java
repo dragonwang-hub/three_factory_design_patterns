@@ -1,9 +1,9 @@
-package abstractfactorypattern.product.strict;
+package abstractfactorypattern.product;
 
 /**
  * @author yunlong.wang
  */
-public class StrictOperation {
+public abstract class AbstractOperation {
     private double numberA = 0d;
     private double numberB = 0d;
 
@@ -23,7 +23,5 @@ public class StrictOperation {
         this.numberB = numberB;
     }
 
-    public double getResult() {
-        return 0d;
-    }
+    public abstract double getResult();
 }

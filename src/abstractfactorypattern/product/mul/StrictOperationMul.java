@@ -1,11 +1,9 @@
-package abstractfactorypattern.product.strict.concrete;
-
-import abstractfactorypattern.product.strict.StrictOperation;
+package abstractfactorypattern.product.mul;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
-public class StrictOperationMul extends StrictOperation {
+public class StrictOperationMul extends Mul {
     @Override
     public double getResult() {
         BigDecimal bigDecimalA = BigDecimal.valueOf(getNumberA());
