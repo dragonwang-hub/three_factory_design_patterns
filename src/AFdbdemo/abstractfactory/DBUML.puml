@@ -1,0 +1,61 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+package "Product"{
+interface IUser {
+    void insert(User user)
+    User getUser(int id)
+}
+note top: Abstract ProductA
+
+package "Concrete ProductA" {
+    class SqlserverUser extends IUser {
+        void insert(User user)
+        User getUser(int id)
+    }
+    class AccessUser extends IUser {
+        void insert(User user)
+        User getUser(int id)
+    }
+}
+
+interface IDepartment {
+    void insert(Department department)
+    Department getDepartment(int id)
+}
+note top: Abstract ProductB
+package "Concrete ProductB" {
+    class SqlserverDepartment extends IDepartment {
+        void insert(Department department)
+        Department getDepartment(int id)
+    }
+    class AccessDepartment extends IDepartment {
+        void insert(Department department)
+        Department getDepartment(int id)
+    }
+}
+}
+
+interface IFactory {
+    IUser createUser()
+    IDepartment createDepartment()
+}
+note top: Abstract Factory
+
+package "Concrete Factory"{
+    class SqlserverFactory implements IFactory {
+        IUser createUser()
+        IDepartment createDepartment()
+    }
+    class AccessFactory implements IFactory {
+        IUser createUser()
+        IDepartment createDepartment()
+    }
+}
+SqlserverUser <.[#green] SqlserverFactory
+SqlserverDepartment <.[#green] SqlserverFactory
+
+AccessUser <.[#blue] AccessFactory
+AccessDepartment <.[#blue] AccessFactory
+
+@enduml
