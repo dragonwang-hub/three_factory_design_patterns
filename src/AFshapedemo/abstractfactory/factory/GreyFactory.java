@@ -2,7 +2,7 @@ package AFshapedemo.abstractfactory.factory;
 
 import AFshapedemo.abstractfactory.product.Shape;
 import AFshapedemo.abstractfactory.product.circle.GreyCircle;
-import AFshapedemo.abstractfactory.product.rectange.GreyRectange;
+import AFshapedemo.abstractfactory.product.rectange.GreyRectangle;
 
 public class GreyFactory implements IFactory {
     @Override
@@ -12,6 +12,6 @@ public class GreyFactory implements IFactory {
 
     @Override
     public Shape getRectange() {
-        return new GreyRectange();
+        return new GreyRectangle();
     }
 }

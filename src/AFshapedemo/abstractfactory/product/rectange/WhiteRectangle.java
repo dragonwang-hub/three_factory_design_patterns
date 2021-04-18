@@ -1,8 +1,8 @@
 package AFshapedemo.abstractfactory.product.rectange;
 
-public class GreyRectange extends Rectange {
+public class WhiteRectangle extends Rectangle {
     @Override
     public void draw() {
-        System.out.println("Draw Grey Rectange!");
+        System.out.println("Draw White Rectange!");
     }
 }
