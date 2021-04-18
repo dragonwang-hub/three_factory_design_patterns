@@ -1,7 +1,6 @@
-package AFdbdemo.abstractfactory.product.department;
+package AFdbdemo.reflectaddsimplefactory.product.department;
 
-import AFdbdemo.abstractfactory.PO.Department;
-import AFdbdemo.abstractfactory.PO.User;
+import AFdbdemo.reflectaddsimplefactory.PO.Department;
 
 public class SqlserverDepartment implements IDepartment {
     @Override

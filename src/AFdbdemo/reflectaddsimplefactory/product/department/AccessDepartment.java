@@ -1,6 +1,7 @@
-package AFdbdemo.abstractfactory.product.department;
+package AFdbdemo.reflectaddsimplefactory.product.department;
 
-import AFdbdemo.abstractfactory.PO.Department;
+import AFdbdemo.reflectaddsimplefactory.PO.Department;
+
 
 public class AccessDepartment implements IDepartment {
     @Override
