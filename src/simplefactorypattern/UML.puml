@@ -6,7 +6,9 @@ class Operation {
     double numberB
     double getResult()
 }
+note left: Abstract Product
 
+package "Concrete Product"{
 class OperationAdd {
     double getResult()
 }
@@ -19,10 +21,12 @@ class OperationMul {
 class OperationDiv {
     double getResult()
 }
+}
 
 class OperationFactory {
     {static} Operation createOperation()
 }
+note left: Simple Factory
 
 Operation <|-- OperationAdd
 Operation <|-- OperationSub
