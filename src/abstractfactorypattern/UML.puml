@@ -1,62 +1,105 @@
 @startuml
 'https://plantuml.com/class-diagram
 
-abstract Operation {
+abstract AbstractOperation {
     double numberA
     double numberB
     {abstract} double getResult()
 }
 note left: Abstract Product
 
-package "Concrete Product"{
-class OperationAdd {
+package "Abstract Add" {
+class Add extends AbstractOperation {
     double getResult()
 }
-class OperationSub {
+
+package "Concrete Add" {
+class OperationAdd extends Add {
     double getResult()
 }
-class OperationMul {
+class StrictOperationAdd extends Add {
     double getResult()
 }
-class OperationDiv {
-    double getResult()
 }
 }
 
+package "Abstract Sub" {
+class Sub extends AbstractOperation {
+    double getResult()
+}
+
+package "Concrete Sub" {
+class OperationSub extends Sub {
+    double getResult()
+}
+class StrictOperationSub extends Sub {
+    double getResult()
+}
+}
+}
+
+package "Abstract Mul" {
+class Mul extends AbstractOperation {
+    double getResult()
+}
+
+package "Concrete Mul" {
+class OperationMul extends Mul {
+    double getResult()
+}
+class StrictOperationMul extends Mul {
+    double getResult()
+}
+}
+}
+
+package "Abstract Div" {
+class Div extends AbstractOperation {
+    double getResult()
+}
+
+package "Concrete Div" {
+class OperationDiv extends Div {
+    double getResult()
+}
+class StrictOperationDiv extends Div {
+    double getResult()
+}
+}
+}
+
+
 interface IFactory {
-    Operation createOperation()
+    Add createAdd()
+    Sub createSub()
+    Div createDiv()
+    Mul createMul()
 }
 note right: Abstract Factory
 
 package "Concrete Factory"{
-class AddFactory{
-    Operation createOperation()
+class NormalFactory implements IFactory {
+    Add createAdd()
+    Sub createSub()
+    Div createDiv()
+    Mul createMul()
 }
-class SubFactory{
-    Operation createOperation()
-}
-class DivFactory{
-    Operation createOperation()
-}
-class MulFactory{
-    Operation createOperation()
+class StrictFactory implements IFactory {
+    Add createAdd()
+    Sub createSub()
+    Div createDiv()
+    Mul createMul()
 }
 }
 
-IFactory <|-- AddFactory
-IFactory <|-- SubFactory
-IFactory <|-- DivFactory
-IFactory <|-- MulFactory
+OperationAdd <.[#blue] NormalFactory
+OperationSub <.[#blue] NormalFactory
+OperationMul <.[#blue] NormalFactory
+OperationDiv <.[#blue] NormalFactory
+StrictOperationAdd <.[#green] StrictFactory
+StrictOperationSub <.[#green] StrictFactory
+StrictOperationMul <.[#green] StrictFactory
+StrictOperationDiv <.[#green] StrictFactory
 
-Operation <|-- OperationAdd
-Operation <|-- OperationSub
-Operation <|-- OperationMul
-Operation <|-- OperationDiv
-Operation <. IFactory
-
-OperationAdd <.[#green] AddFactory
-OperationSub <.[#green] SubFactory
-OperationDiv <.[#green] DivFactory
-OperationMul <.[#green] MulFactory
 
 @enduml
