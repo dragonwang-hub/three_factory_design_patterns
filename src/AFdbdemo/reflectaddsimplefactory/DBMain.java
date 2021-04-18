@@ -4,10 +4,8 @@ import AFdbdemo.reflectaddsimplefactory.PO.User;
 import AFdbdemo.reflectaddsimplefactory.factory.DataAccess;
 import AFdbdemo.reflectaddsimplefactory.product.department.IDepartment;
 import AFdbdemo.reflectaddsimplefactory.product.user.IUser;
-import com.sun.org.apache.xml.internal.security.Init;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
