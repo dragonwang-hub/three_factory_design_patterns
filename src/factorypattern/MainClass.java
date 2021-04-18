@@ -10,8 +10,8 @@ public class MainClass {
 //        IFactory iFactory = new MulFactory();
         IFactory iFactory = new AddFactory();
         Operation operation = iFactory.createOperation();
-        operation.setNumberA(9.11);
-        operation.setNumberB(1.99);
+        operation.setNumberA(9.1111);
+        operation.setNumberB(1.99999);
         double result = operation.getResult();
         System.out.println("The result is:" + result);
     }
