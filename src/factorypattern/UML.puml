@@ -1,0 +1,62 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Operation {
+    double numberA
+    double numberB
+    double getResult()
+}
+note left: Abstract Product
+
+package "Concrete Product"{
+class OperationAdd {
+    double getResult()
+}
+class OperationSub {
+    double getResult()
+}
+class OperationMul {
+    double getResult()
+}
+class OperationDiv {
+    double getResult()
+}
+}
+
+interface IFactory {
+    Operation createOperation()
+}
+note right: Simple Factory
+
+package "Concrete Factory"{
+class AddFactory{
+    Operation createOperation()
+}
+class SubFactory{
+    Operation createOperation()
+}
+class DivFactory{
+    Operation createOperation()
+}
+class MulFactory{
+    Operation createOperation()
+}
+}
+
+IFactory <|-- AddFactory
+IFactory <|-- SubFactory
+IFactory <|-- DivFactory
+IFactory <|-- MulFactory
+
+Operation <|-- OperationAdd
+Operation <|-- OperationSub
+Operation <|-- OperationMul
+Operation <|-- OperationDiv
+Operation <. IFactory
+
+OperationAdd <.[#green] AddFactory
+OperationSub <.[#green] SubFactory
+OperationDiv <.[#green] DivFactory
+OperationMul <.[#green] MulFactory
+
+@enduml
