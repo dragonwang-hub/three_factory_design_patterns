@@ -36,26 +36,16 @@ package "Concrete ProductB" {
 }
 }
 
-interface IFactory {
+class DataAccess {
     IUser createUser()
     IDepartment createDepartment()
 }
-note top: Abstract Factory
+note top: Simple Factory
+note bottom of DataAccess: Use reflection techniques to create objects
 
-package "Concrete Factory"{
-    class SqlserverFactory implements IFactory {
-        IUser createUser()
-        IDepartment createDepartment()
-    }
-    class AccessFactory implements IFactory {
-        IUser createUser()
-        IDepartment createDepartment()
-    }
-}
-SqlserverUser <.[#green] SqlserverFactory
-SqlserverDepartment <.[#green] SqlserverFactory
+DataAccess .[#green]> IDepartment
+DataAccess .[#blue]> IUser
 
-AccessUser <.[#blue] AccessFactory
-AccessDepartment <.[#blue] AccessFactory
+
 
 @enduml
