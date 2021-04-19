@@ -5,13 +5,13 @@ interface Shape {
 }
 
 // triangle product
-class BlackRectange implements Shape {
+class BlackRectangle implements Shape {
 }
 
-class GreyRectange implements Shape {
+class GreyRectangle implements Shape {
 }
 
-class WhiteRectange implements Shape {
+class WhiteRectangle implements Shape {
 }
 
 // circle product

@@ -5,16 +5,16 @@ interface ShapeFactory {
     Shape getShape();
 }
 
-// BlackRectange factory
-class BlackRectangeFactory {
+// BlackRectangle factory
+class BlackRectangleFactory {
 }
 
-// GreyRectange factory
-class GreyRectangeFactory {
+// GreyRectangle factory
+class GreyRectangleFactory {
 }
 
-// WhiteRectange factory
-class WhiteRectangeFactory {
+// WhiteRectangle factory
+class WhiteRectangleFactory {
 }
 
 // BlackCircle factory
