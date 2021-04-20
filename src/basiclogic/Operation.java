@@ -3,10 +3,28 @@ package basiclogic;
 /**
  * @author yunlong.wang
  */
-public class Opertation {
-    static double getResult(double numberA, double numberB, String operate) {
-        double result = 0d;
+public class Operation {
+    private double numberA;
+    private double numberB;
 
+    public double getNumberA() {
+        return numberA;
+    }
+
+    public void setNumberA(double numberA) {
+        this.numberA = numberA;
+    }
+
+    public double getNumberB() {
+        return numberB;
+    }
+
+    public void setNumberB(double numberB) {
+        this.numberB = numberB;
+    }
+
+    double getResult(String operate) {
+        double result = 0d;
         switch (operate) {
             case "+":
                 result = numberA + numberB;

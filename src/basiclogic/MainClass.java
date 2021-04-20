@@ -27,7 +27,10 @@ public class MainClass {
             numberB = scanner.nextDouble();
         }
         scanner.close();
-        double result = Opertation.getResult(numberA, numberB, operate);
+        Operation operation = new Operation();
+        operation.setNumberA(numberA);
+        operation.setNumberB(numberB);
+        double result = operation.getResult(operate);
         System.out.println("The result is:" + result);
     }
 }
