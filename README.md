@@ -158,7 +158,7 @@ public class MainClass {
 - Abstract Product：所有产品对象抽象的父类，负责描述所有产品共有的公有接口
 - Concrete Product：负责创建具体产品实例
 
-![image-20210419225812547](./images/image-20210419225812547.png)
+![image-20210419225812547](images/image-20210419225812547.png)
 
 简单工厂的实现目的：
 
@@ -167,7 +167,7 @@ public class MainClass {
 
 因此，对于上述的四则运算示例，使用简单工厂模式实现，如下所示：
 
-![image-20210419230327451](./images/image-20210419230327451.png)
+![image-20210419230327451](images/image-20210419230327451.png)
 
 
 
@@ -195,7 +195,7 @@ public class MainClass {
 - Abstract Product：所有产品对象抽象的父类，负责描述所有产品共有的公有接口
 - Concrete Product：负责实现抽象产品接口，由专门的具体工厂创建，一一对应
 
-![image-20210420200941754](./images/image-20210420200941754.png)
+![image-20210420200941754](images/image-20210420200941754.png)
 
 工厂模式在简单工厂模式基础进行改造，声明核心工厂类和对应每个产品的具体工厂类，用于实现动态创建每一个产品。在工厂模式中：
 
@@ -204,7 +204,7 @@ public class MainClass {
 
 对于四则运算示例，其使用工厂模式实现，如下所示：
 
-![image-20210420201541535](./images/image-20210420201541535.png)
+![image-20210420201541535](images/image-20210420201541535.png)
 
 **注： 代码可查看[Github Repo](https://github.com/dragonwang-hub/three_factory_design_patterns)**
 
@@ -234,7 +234,7 @@ public class MainClass {
 所有不同颜色的矩形可以继承于矩形父类，其作为一个产品等级结构。
 每个工厂类可以创建处于同一等级结构的一组产品，这组产品也就是产品族。
 
-![image-20210420210312352](./images/image-20210420210312352.png)
+![image-20210420210312352](images/image-20210420210312352.png)
 
 抽象工厂模式是所有形式的工厂模式中最为抽象和最具一般性的一种形态。
 
@@ -245,7 +245,7 @@ public class MainClass {
 - Abstract Product：所有产品对象抽象的父类，负责描述所有产品共有的公有接口
 - Concrete Product：负责实现抽象产品接口中定义的业务方法
 
-![image-20210420211856445](./images/image-20210420211856445.png)
+![image-20210420211856445](images/image-20210420211856445.png)
 
 **抽象工厂与工厂模式最大区别**在于：工厂模式只针对一个产品等级结构，抽象工厂模式却可以面向多个产品等级结构。
 因此，抽象工厂是最具有一般性的一种形态。当系统需要工厂生产的产品不是一个对象，而是一组对象时，就需要使用抽象工厂模式。使用抽象工厂，可以实现：
@@ -257,7 +257,7 @@ public class MainClass {
 
 那么针对运算示例新增加的严格运算模式的需求，使用抽象工厂实现示例如下：
 
-![image-20210420212355896](./images/image-20210420212355896.png)
+![image-20210420212355896](images/image-20210420212355896.png)
 
 **注： 代码可查看[Github Repo](https://github.com/dragonwang-hub/three_factory_design_patterns)**
 
@@ -276,7 +276,7 @@ public class MainClass {
 
 这就需要设计的系统结构必须支持多个产品族的创建。使用抽象工厂模式直接创建具体工厂类，每个工厂类负责创建当前需求所需要使用的一系列表（产品族）。
 
-![image-20210420213945317](./images/image-20210420213945317.png)
+![image-20210420213945317](images/image-20210420213945317.png)
 
 **注： 代码可查看[Github Repo](https://github.com/dragonwang-hub/three_factory_design_patterns)**
 
@@ -341,7 +341,7 @@ public class DataAccess {
 
 相应系统结构与简单工厂一样。只是在工厂类中，不再使用分支选择去判断创建何种对象实例，使用反射技术直接实例化所需对象。
 
-![image-20210420215935029](./images/image-20210420215935029.png)
+![image-20210420215935029](images/image-20210420215935029.png)
 
 **注： 代码可查看[Github Repo](https://github.com/dragonwang-hub/three_factory_design_patterns)**
 
