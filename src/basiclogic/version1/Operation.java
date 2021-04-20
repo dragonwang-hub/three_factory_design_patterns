@@ -1,4 +1,4 @@
-package basiclogic;
+package basiclogic.version1;
 
 /**
  * @author yunlong.wang

@@ -1,4 +1,4 @@
-package basiclogic;
+package basiclogic.version1;
 
 import java.util.Scanner;
 
